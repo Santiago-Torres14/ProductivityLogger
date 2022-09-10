@@ -1,5 +1,6 @@
 package tech.freedomtorres.productivitylogger.screen
 
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
@@ -50,11 +51,7 @@ fun LoginPage(navController: NavHostController) {
         val username = remember { mutableStateOf(TextFieldValue()) }
         val password = remember { mutableStateOf(TextFieldValue()) }
 
-        Text(text = "Login", style = androidx.compose.ui.text.TextStyle(
-            fontSize = 40.sp,
-            fontFamily = FontFamily.Cursive
-        )
-        )
+        Text(text = "Login", style = TextStyle(fontSize = 40.sp, fontFamily = FontFamily.Cursive))
 
         Spacer(modifier = Modifier.height(20.dp))
         TextField(
