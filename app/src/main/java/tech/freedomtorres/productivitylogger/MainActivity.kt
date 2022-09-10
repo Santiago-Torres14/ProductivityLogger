@@ -10,34 +10,29 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import tech.freedomtorres.productivitylogger.screen.ScreenMain
 import tech.freedomtorres.productivitylogger.ui.theme.ProductivityLoggerTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ProductivityLoggerTheme {
-                // A surface container using the 'background' color from the theme
+            JetpackComposeDemoTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Santiago Torres")
+                    ScreenMain()
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    ProductivityLoggerTheme {
-        Greeting("Android")
+    JetpackComposeDemoTheme {
+        ScreenMain()
     }
 }
